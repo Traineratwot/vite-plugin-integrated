@@ -8,7 +8,7 @@
 
 ниже приведен пример ejs шаблона и подключение плагина.
 
-Также 3
+Также в `options` можно прокинуть любые данные и использовать в `ejs`
 
 
 ## usage
@@ -21,7 +21,8 @@ npm i vite-plugin-integrated
 function viteIntegratedPlugin(
 	{
 	  templatePath: string,// ejs template
-	  name        : string //name output file
+	  name        : string, //name output file
+	  options:{}
   }
 ){}
 ```
