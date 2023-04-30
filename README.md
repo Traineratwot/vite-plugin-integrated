@@ -11,13 +11,13 @@
 
 ## usage
 ```bash
-npm add vite-integrated-plugin
+npm i vite-plugin-integrated
 ```
 
 
 ```js
 function viteIntegratedPlugin(
-	templatePath: string// ejs template
+	templatePath: string,// ejs template
 	name: string //name output file
 ){}
 ```
