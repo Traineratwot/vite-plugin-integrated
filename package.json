@@ -11,8 +11,14 @@
     "preview": "vite preview"
   },
   "keywords": [
-    "vite-plugin"
+    "vite-plugin",
+    "vite plugin",
+    "vite"
   ],
+  "bugs": {
+    "url": "https://github.com/Traineratwot/vite-plugin-integrated/issues"
+  },
+  "homepage": "https://github.com/Traineratwot/vite-plugin-integrated#readme",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
