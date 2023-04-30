@@ -10,6 +10,11 @@
 
 
 ## usage
+```bash
+npm add vite-integrated-plugin
+```
+
+
 ```js
 function viteIntegratedPlugin(
 	templatePath: string// ejs template
