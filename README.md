@@ -6,7 +6,9 @@
 Этот плагин поможет решить эту проблему. Он позволит вам сгенерировать помимо `index.html` еще какой-нить файл например `index.tpl` (как в php-smarty) и в него записать все правильнпо подключенные 
 скрипты и стили по шаблону описанному в `index.ejs`
 
-ниже приведен пример ejs шаблона и подключение плагина )
+ниже приведен пример ejs шаблона и подключение плагина.
+
+Также 3
 
 
 ## usage
@@ -17,8 +19,10 @@ npm i vite-plugin-integrated
 
 ```js
 function viteIntegratedPlugin(
-	templatePath: string,// ejs template
-	name: string //name output file
+	{
+	  templatePath: string,// ejs template
+	  name        : string //name output file
+  }
 ){}
 ```
 
@@ -28,7 +32,11 @@ import { viteIntegratedPlugin } from './plugin/index.js'
 
 export default {
 	plugins: [
-		viteIntegratedPlugin('index.ejs','index.tpl')
+		viteIntegratedPlugin({
+								 templatePath: 'index.ejs',
+								 name        : 'index.tpl'
+		}
+		)
 	],
 }
 

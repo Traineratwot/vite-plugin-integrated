@@ -5,6 +5,10 @@ import PluginIntegrated from './plugin/index.js'
 export default {
 	plugins: [
 		Inspect(),
-		PluginIntegrated('index.ejs', 'index.tpl')
+		PluginIntegrated(
+			{
+				templatePath: 'index.ejs',
+				name        : 'index.tpl'
+			})
 	],
 }

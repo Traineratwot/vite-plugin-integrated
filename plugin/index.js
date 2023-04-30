@@ -26,28 +26,26 @@ function parser(html) {
 
 /**
  * Конструктор для создания книги
- * @param {string} templatePath - path to ejs template
- * @param {string|null} name - path to output file
- * @param {{}} options - you custom variables for ejs
+ * @param {{templatePath: string,name?: string,	options?: { [key: string]: any }}} config
  */
-export const PluginIntegrated = (templatePath, name = null, options = {}) => ({
+export const PluginIntegrated = (config) => ({
 	name  : 'vite-integrated-plugin',
 	outDir: '',
 	configResolved(config) {
 		outDir = config.build.outDir
 	},
 	async transformIndexHtml(html, ctx) {
-		const _options = parser(html)
+		const options = parser(html)
 
-		const newHtml = await ejs.renderFile(templatePath, {...options, ..._options,})
-		if(name) {
-			const newFileName = path.join(outDir, name)
+		const newHtml = await ejs.renderFile(config.templatePath, {...config.options, ...options,})
+		if(config.name) {
+			const newFileName = path.join(outDir, config.name)
 			console.log(newFileName)
 			fs.writeFileSync(newFileName, newHtml)
+			return html
 		} else {
 			return newHtml
 		}
-		return html
 	},
 
 })
