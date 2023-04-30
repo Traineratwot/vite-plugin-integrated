@@ -1,5 +1,16 @@
 # vite-integrated-plugin
 
+### En
+It happens that you need to write a small reactive interface and implement it into some old project, 
+and since with each build js and css bundles are called differently (and this is correct), it is not possible to simply connect everything and throw it into the layout `<div id="root">`
+
+This plugin will help solve this problem. It will allow you to generate in addition `index.html` another thread file, for example `index.tpl` (as in php-smarty) and write all the correctly connected scripts and styles into it according to the template described in index.ejs
+
+below is an example of a js template and plug-in connection.
+
+Also, in `options`, you can throw any data and use it in `ejs`
+
+### Ru
 Бывает так что нужно написать небольшой реактивный интерфейс и внедрить его в какой-нибудь старый состоявшийся проэкт
 а так как при каждом билде js и css бандлы называются по разному (и это правильно) не возможно просто подключить все и закинуть в верстку `<div id="root">`
 
@@ -10,8 +21,7 @@
 
 Также в `options` можно прокинуть любые данные и использовать в `ejs`
 
-
-## usage
+### usage
 ```bash
 npm i vite-plugin-integrated
 ```
