@@ -8,7 +8,7 @@ export default {
 		PluginIntegrated(
 			{
 				templatePath: 'index.ejs',
-				name        : 'index.tpl'
+				name        : 'include.js'
 			})
 	],
 }
