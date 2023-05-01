@@ -53,8 +53,33 @@ export default {
 
 ```
 ```ejs
-<!--index.ejs-->
+<!--index.ejs template for smarty-->
 <% scripts.forEach(function(script) { %><script type="module" crossorigin src="<%= script %>"></script><% }) %>
 <% styles.forEach(function(style) { %><link rel="stylesheet" href="<%= style %>"><% }) %>
 <div id="app"></div>
+```
+
+
+```ejs
+<!--index.ejs template for easy connection to the browser -->
+(function() {
+function add(type, value) {
+	let element
+	if(type === 'script') {
+		element = document.createElement('script')
+		element.type = 'module'
+		element.crossorigin = true
+		element.src = value
+	}
+	if(type === 'style') {
+		element = document.createElement('link')
+		element.rel = 'stylesheet'
+		element.href = value
+	}
+document.body.appendChild(element)
+}
+<% scripts.forEach(function(script) { %>add('script','<%=script%>') <% }) %>
+<% styles.forEach(function(style) { %>add('style','<%=style%>') <% }) %>
+})()
+
 ```
