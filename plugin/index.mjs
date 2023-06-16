@@ -10,11 +10,13 @@ function parser(html) {
 	const scripts = []
 	const styles = []
 	doc.querySelectorAll('script').forEach(script => scripts.push(script.getAttribute('src')))
-	doc.querySelectorAll('link').forEach(style => {
+	doc.querySelectorAll('link').forEach(
+		style => {
 			if(style.getAttribute('rel') === 'stylesheet') {
 				styles.push(style.getAttribute('href'))
 			}
-		})
+		}
+	)
 
 	return {
 		scripts,
