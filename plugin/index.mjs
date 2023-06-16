@@ -38,7 +38,7 @@ export const PluginIntegrated = (config) => ({
 		const options = parser(html)
 
 		const newHtml = await ejs.renderFile(config.templatePath, {...config.options, ...options,})
-		if(fs.existsSync(outDir) && config.name) {
+		if(config.name) {
 			const newFileName = path.join(outDir, config.name)
 			console.log(newFileName)
 			fs.writeFileSync(newFileName, newHtml)

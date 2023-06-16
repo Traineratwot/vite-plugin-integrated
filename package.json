@@ -1,45 +1,44 @@
 {
-	"name": "vite-plugin-integrated",
-	"private": false,
-	"version": "1.1.4",
-	"type": "module",
-	"license": "MIT",
-	"main": "plugin/index.js",
-	"module": "plugin/index.mjs",
-	"types": "plugin/index.d.ts",
-	"scripts": {
-		"dev": "vite",
-		"build": "tsc && vite build",
-		"preview": "vite preview"
+	"name"           :"vite-plugin-integrated",
+	"private"        :false,
+	"version"        :"1.1.4",
+	"type"           :"module",
+	"license"        :"MIT",
+	"main"           :"plugin/index.js",
+	"module"         :"plugin/index.mjs",
+	"types"          :"plugin/index.d.ts",
+	"scripts"        :{
+		"dev"    :"vite",
+		"build"  :"tsc && vite build",
+		"preview":"vite preview"
 	},
-	"keywords": [
+	"keywords"       :[
 		"vite-plugin",
 		"vite plugin",
 		"vite"
 	],
-	"bugs": {
-		"url": "https://github.com/Traineratwot/vite-plugin-integrated/issues"
+	"bugs"           :{
+		"url":"https://github.com/Traineratwot/vite-plugin-integrated/issues"
 	},
-	"homepage": "https://github.com/Traineratwot/vite-plugin-integrated#readme",
-	"exports": {
-		".": {
-			"types": "./plugin/index.d.ts",
-			"require": "./plugin/index.cjs",
-			"import": "./plugin/index.mjs"
+	"homepage"       :"https://github.com/Traineratwot/vite-plugin-integrated#readme",
+	"exports"        :{
+		"."  :{
+			"types"  :"./plugin/index.d.ts",
+			"require":"./plugin/index.cjs",
+			"import" :"./plugin/index.mjs"
 		},
-		"./*": "./plugin"
+		"./*":"./plugin"
 	},
-	"files": [
+	"files"          :[
 		"plugin"
 	],
-	"devDependencies": {
-		"@types/node": "^20.3.1",
-		"typescript": "^5.0.2",
-		"vite": "^4.3.2",
-		"vite-plugin-inspect": "^0.7.24"
+	"devDependencies":{
+		"typescript"         :"^5.0.2",
+		"vite"               :"^4.3.2",
+		"vite-plugin-inspect":"^0.7.24"
 	},
-	"dependencies": {
-		"ejs": "^3.1.9",
-		"jsdom": "^21.1.1"
+	"dependencies"   :{
+		"ejs"  :"^3.1.9",
+		"jsdom":"^21.1.1"
 	}
 }
