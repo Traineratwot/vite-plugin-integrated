@@ -24,6 +24,8 @@ Also, in `options`, you can throw any data and use it in `ejs`
 ### usage
 ```bash
 npm i vite-plugin-integrated
+or
+npm jsr i @traineratwot/vite-plugin-integrated
 ```
 
 
