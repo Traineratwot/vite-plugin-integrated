@@ -41,7 +41,7 @@ function viteIntegratedPlugin(
 
 ```js
 // vite.config.ts
-import { viteIntegratedPlugin } from './plugin/index.js'
+import viteIntegratedPlugin  from 'vite-plugin-integrated'
 
 export default {
 	plugins: [
